@@ -13,7 +13,7 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author: <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
+<sub>作者: <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
 <small> October, 2020</small></sub>
 
 </div>
@@ -24,10 +24,10 @@
 
 | # Day |                                                           Topics                                                            |
 | ----- | :-------------------------------------------------------------------------------------------------------------------------: |
-|00|[介绍](#介绍)<br> [如何使用储存库Repository](#如何使用储存库Repository)<br> [前提条件](#前提条件)<br> [开发环境](#开发环境)|
-|01|[JavaScript Refresher](./01_Day_JavaScript_Refresher/01_javascript_refresher.md)|
-|02|[Getting Started React](./02_Day_Introduction_to_React/02_introduction_to_react.md)|
-|03|[Setting Up](./03_Day_Setting_Up/03_setting_up.md)|
+|00|[介绍](#介绍)<br> [如何使用储存库Repository](#如何使用储存库Repository)<br> [开展学习的前提条件](#前提条件)<br> [准备工作](#准备工作)|
+|01|[Javascript 复习](./01_Day_JavaScript_Refresher/01_javascript_refresher.md)|
+|02|[开始学习React](./02_Day_Introduction_to_React/02_introduction_to_react.md)|
+|03|[搭建第一个项目](./03_Day_Setting_Up/03_setting_up.md)|
 |04|[Components](./04_Day_Components/04_components.md)|
 |05|[Props](./05_Day_Props/05_props.md)|
 |06|[List, Map and Keys](./06_Day_Map_List_Keys/06_map_list_keys.md)|
@@ -77,63 +77,63 @@ Support [*Asabeneh*](https://www.patreon.com/asabeneh?fan_landing=true) to creat
 - [介绍](#介绍)
 - [前提条件](#前提条件)
 - [如何使用储存库Repository](#如何使用储存库Repository)
-  - [Star and Fork this Repo](#star-and-fork-this-repo)
-  - [Clone your Fork](#clone-your-fork)
-  - [Create a New Branch](#create-a-new-branch)
-  - [Structure Exercise Solutions](#structure-exercise-solutions)
-  - [Commit Exercise Solutions](#commit-exercise-solutions)
-  - [Update your Fork Daily](#update-your-fork-daily)
-- [开发环境](#开发环境)
+  - [给这个项目一个Star和Fork](#给这个项目一个Star和Fork)
+  - [克隆你的 Fork](#克隆你的Fork)
+  - [创建一个新分支](#创建一个新分支)
+  - [构建你的日常练习目录](#构建你的日常练习目录)
+  - [提交你的练习](#提交你的练习)
+  - [每天更新你的Fork](#每天更新你的Fork)
+- [准备工作](#准备工作)
   - [安装Node.js](#安装Node.js)
   - [浏览器](#浏览器)
-    - [Installing Google Chrome](#installing-google-chrome)
-    - [Opening Google Chrome Console](#opening-google-chrome-console)
-    - [Writing Code on Browser Console](#writing-code-on-browser-console)
+    - [下载 Google Chrome浏览器](#installing-google-chrome)
+    - [打开 Google Chrome 的命令窗口](#opening-google-chrome-console)
+    - [在浏览器的命令窗口中写代码](#writing-code-on-browser-console)
       - [Console.log](#consolelog)
-      - [Console.log with Multiple Arguments](#consolelog-with-multiple-arguments)
-      - [Comments](#comments)
-      - [Syntax](#syntax)
-    - [Arithmetics](#arithmetics)
-  - [Code Editor](#code-editor)
-    - [Installing Visual Studio Code](#installing-visual-studio-code)
-    - [How to Use Visual Studio Code](#how-to-use-visual-studio-code)
+      - [多参数的Console.log](#consolelog-with-multiple-arguments)
+      - [注释](#comments)
+      - [语法](#syntax)
+    - [算术运算](#arithmetics)
+  - [代码编辑器](#code-editor)
+    - [下载 Visual Studio Code](#installing-visual-studio-code)
+    - [如何使用 Visual Studio Code](#how-to-use-visual-studio-code)
 
 ---
 
 ## 介绍
+**恭喜**你决定加入30天React编程挑战.在这个挑战中你将学会开发一个React应用所需要的所有内容.在这个挑战的最后，你将获得30DaysOfReact 编程挑战认证.如果你需要帮助或者如果你想帮助其他人，你可以参与[telegram group](https://t.me/thirtydaysofreact).
 
-**Congratulations** on deciding to participate in 30 days of React programming challenge. In this challenge you will learn everything you need to use to develop a React application. In the end of the challenge you will get a 30DaysOfReact programming challenge completion certificate. In case you need help or if you would like to help others you may join the [telegram group](https://t.me/thirtydaysofreact).
+**A 30DaysOfReact** 挑战同时帮助初学者、JavaScript开发、React开发欢迎来到30天学会React. React是一个JavaScript库.我很享受使用和教授React,希望你也如此.在这个挑战中你将一步一步学到React是世界上最受欢迎的用户界面JavaScript库之一。
 
-**A 30DaysOfReact** challenge is a guide for both beginners and advanced JavaScript and React developers. Welcome to 30 Days Of React. React is a JavaScript library. I enjoy using and teaching React and I hope you will do so too.
-In this step by step 30 Days React challenge, you will learn React which is one of most popular user interface JavaScript libraries.
-React can do everything that JavaScript can do. React can be used **_to add interactivity to websites, to develop mobile apps, desktop applications, games_**.
-I believe you will learn quite a lot in the next 30 days and your programming and problem solving skills will also be improved significantly.
+React 能够做所有JavaScript能做的事情.React可以**_给网页添加交互, 开发一个移动端app, 桌面应用, 游戏_**.我相信你能在这30天中学到很多编程技巧并显著提高问题解决技巧.
 
-I will use conversational English and less jargons to write this challenge. The content will be continuously updated. If you find a typo or grammar mistakes don't be surprised because I don't do any proof read before I publish it. I would recommend you to focus on the main message of the challenge instead of the English and some minor mistakes. I really appreciate if you send me pull requests for improvement and remember to pull first from master before you send pull requests. Most of the images I have used in this challenge came from 30DaysOfJavaScript challenge therefore you may need to rename file names and folders 30DaysOfReact.
-If you are good at arrays, loops, functions, objects, functional programming, destructuring and spreading and class then you will be able to follow the challenge properly. Otherwise, I strongly recommend you to check [30DaysOfJavaScript](https://github.com/Asabeneh/30-Days-Of-JavaScript).
+我将使用对话式的英语和更少的专业语言来持续更新内容,如果你发现拼写或者语法错误请不要惊讶，因为在发布之前我并没有做检查.我推荐你专注于挑战而不是一些小错误.希望你们在pull request前能够先从master分支拉取代码.挑战的大部分图片来自30DaysOfJavaScript，所以你可能需要将文件或文件夹重命名为30DaysOfReact。
 
-Before you dive into this course, you may check the [review](https://t.me/thirtydaysofreact/992) of 30 Days Of React. 
+如果你掌握数组, 循环, 函数, 对象, 函数式编程, 解构(ES6) ，展开(ES6), 类编程，那么你适合学习本挑战.否则我推荐你先学习[30DaysOfJavaScript](https://github.com/Asabeneh/30-Days-Of-JavaScript).
+
+
+在你加入这个课程前，你可以先[评价](https://t.me/thirtydaysofreact/992) 30 Days Of React.
 
 ## 前提条件
 
-To get along with the challenge you need to have the following:
+开始这个挑战之前，你需要准备下面这些东西
 
-1. Motivation
-2. A computer
-3. Internet
-4. A browser
-5. A code editor
-6. HTML, CSS and JavaScript intermediate level skill
+1. 动机
+2. 一台计算机
+3. 互联网环境
+4. 浏览器
+5. 代码编辑器
+6. HTML, CSS 和 JavaScript 的中级技能
 
 ## 如何使用储存库Repository
 
-### Star and Fork this Repo
+### 给这个项目一个Star和Fork 
 
-Star this repo to support this work and Fork the repo to create your own copy to work from.
+给这个项目一个Star来支持此项目.并且点一个Fork获得本项目的拷贝从而开始我们的挑战.
 
-### Clone your Fork
+### 克隆你的Fork
 
-You should always work directly from your forked copy.
+你可以在你的fork拷贝上直接编程.
 
 ```bash
 # note that an `ssh` link is used here, but an `https` link will work the same
@@ -141,26 +141,28 @@ git clone git@github.com:username/30-Days-Of-React.git
 cd 30-Days-Of-React
 ```
 
-### Create a New Branch
+### 创建一个新分支
 
-To complete daily exercises, my suggestion is to create a separate branch to house your exercise folder or any other changes you make. This will keep your master branch clean at all times, which means your master will always be similar to the original master.
+完成日常练习，我建议你创建要给新分支来保存你的练习和其它内容.这会保持你的master分支干净.并且总是和原始项目的master相似.
+
 
 ```bash
 git checkout -b exercise-solutions # `-b` creates the branch if it does not exist
 ```
 
-### Structure Exercise Solutions
+### 构建你的日常练习目录
 
 In your new branch, you can use files/folders to structure your solutions to daily exercises
+在新分支上，你可以使用文件/文件夹 构建你的日常练习目录.
 
 ```bash
 mkdir -p solutions/day-01 # `-p` helps create nested directories
 touch solutions/day-01/level1.js # touch creates a file
 ```
 
-### Commit Exercise Solutions
+### 提交你的练习
 
-Commit your solutions to your Fork
+将你的练习提交的你的Fork上.
 
 ```bash
 git add solutions/day-01/level1.js
@@ -168,9 +170,9 @@ git commit -m "chore: exercise level1 complete"
 git push origin exercise-solutions # branch `exercise-solutions` was created earlier
 ```
 
-### Update your Fork Daily
+### 每天更新你的Fork
 
-This repo will be updated daily throughout the month. When a new day's content becomes available, you can update your forked copy with the steps below.
+这个项目在这个一个月中都会被你更新.当新一天的到来时，将昨天的练习更新到github的你的Fork上.
 
 ```bash
 # 1. switch to master branch
@@ -189,16 +191,16 @@ git merge upstream/master master
 git push origin master
 ```
 
-> Note that the updates are only applied to the master branch. If you wish to update any other branch, repeat steps 6-7 with the branch name. See snippet below for `exercise-solutions` branch
+> 注意上面的命令只能提交到master分支上.如果你想要更新其它分析，替换分支名称后重复6-7操作.下面是使用`exercise-solutions`的样例.
 
 ```bash
 git merge upstream/master exercise-solutions
 git push origin exercise-solutions
 ```
 
-## 开发环境
+## 准备工作
 
-I believe you have the motivation and a strong desire to be a developer, a computer and Internet. In addition to that basic to intermediate level HTML, CSS and JS. If you have those, then you have everything to get started.
+我相信你已经非常成为一个开发者，除此之外，如果你有基础到中级的HTML, CSS, JS 水平.那么，你已经准备好了
 
 ### 安装Node.js
 
