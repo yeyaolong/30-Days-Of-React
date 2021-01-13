@@ -86,17 +86,17 @@ Support [*Asabeneh*](https://www.patreon.com/asabeneh?fan_landing=true) to creat
 - [准备工作](#准备工作)
   - [安装Node.js](#安装Node.js)
   - [浏览器](#浏览器)
-    - [下载 Google Chrome浏览器](#installing-google-chrome)
-    - [打开 Google Chrome 的命令窗口](#opening-google-chrome-console)
-    - [在浏览器的命令窗口中写代码](#writing-code-on-browser-console)
+    - [安装 Google Chrome浏览器](#安装Google-Chrome-浏览器)
+    - [打开 Google Chrome 控制台](#打开-Google-Chrome-控制台)
+    - [在浏览器控制台中写代码](#在浏览器控制台中写代码)
       - [Console.log](#consolelog)
-      - [多参数的Console.log](#consolelog-with-multiple-arguments)
-      - [注释](#comments)
-      - [语法](#syntax)
-    - [算术运算](#arithmetics)
-  - [代码编辑器](#code-editor)
-    - [下载 Visual Studio Code](#installing-visual-studio-code)
-    - [如何使用 Visual Studio Code](#how-to-use-visual-studio-code)
+      - [多参数的Console.log](#多参数的Console.log)
+      - [注释](#注释)
+      - [语法](#语法)
+    - [算术运算](#算术运算)
+  - [代码编辑器](#代码编辑器)
+    - [安装 Visual Studio Code](#安装-Visual-Studio-Code)
+    - [如何使用 Visual Studio Code](#如何使用-Visual-Studio-Code)
 
 ---
 
@@ -200,44 +200,44 @@ git push origin exercise-solutions
 
 ## 准备工作
 
-我相信你已经非常成为一个开发者，除此之外，如果你有基础到中级的HTML, CSS, JS 水平.那么，你已经准备好了
+我相信你已经非常渴望成为一个开发者，除此之外，如果你有基础到中级的HTML, CSS, JS 水平.那么，你已经准备好了
 
 ### 安装Node.js
 
-You may not need node.js right now but you may need it for later. Install [node.js](https://nodejs.org/en/).
+你现在可能不需要node.js 但是之后你会需要的.下载 [node.js](https://nodejs.org/en/).
 
 ![Node download](images/download_node.png)
 
-After downloading double click and install
+下载完成后双击安装
 
 ![Install node](images/install_node.png)
 
-We can check if node is installed on our local machine by opening our device terminal or command prompt.
+在控制台使用以下命令检测nodejs是否安装成功.
+
 
 ```sh
 asabeneh $ node -v
 v12.14.0
 ```
-
-When making this tutorial I was using node version 12.14.0, but now the recommended version of node.js for download is 12.17.0.
+写这篇导航时我用的node版本是 12.14.0，但是现在的node推荐版本是12.17.0
 
 ### 浏览器
 
-There are many browsers out there. However, I strongly recommend Google Chrome.
+目前市面上有很多浏览器，但是我强烈推荐Google Chrome
 
-#### Installing Google Chrome
+#### 安装Google Chrome 浏览器
 
-Install [google chrome](https://www.google.com/chrome/) if you do not have one yet. We can write small JavaScript code on the browser console, but we do not use the browser console to develop applications.
+如果你还没有谷歌浏览器，点此处安装 [google chrome](https://www.google.com/chrome/) 我们能够在浏览器的控制台中写一些小的JavaScript代码,但是我们不用浏览器的控制台开发应用.
 
 ![Google Chrome](images/google_chrome.png)
 
-#### Opening Google Chrome Console
+#### 打开 Google Chrome 控制台
 
-You can open Google Chrome console either by clicking three dots at the top right corner of the browser, selecting _More tools -> Developer tools_ or using a keyboard shortcut. I prefer using shortcuts.
+你可通过点击浏览器右上角的三个小点，选择 _More tools -> Developer tools_打开控制台，或者使用键盘快捷键打开浏览器的控制台，我更推荐键盘快捷键
 
 ![Opening chrome](images/opening_developer_tool.png)
 
-To open the Chrome console using a keyboard shortcut. It is good to know the shortcut too as a JavaScript and React developer you will spend much time on a browser console and don't be lazy to open it during development.
+不论是JavaScript还是React开发者都应该知道打开Chrome控制台键盘快捷是什么.你将有大量时间用在浏览器控制台上，并且在做开发时要打开命令它.
 
 ```sh
 Mac
@@ -249,14 +249,14 @@ Ctl+Shift+J
 
 ![Opening console](images/opening_chrome_console_shortcut.png)
 
-After you open the Google Chrome console, try to explore the marked buttons. We will spend most of the time on the Console. The Console is the place where your JavaScript code goes. The Google Console V8 engine changes your JavaScript code to machine code.
-Let us write a JavaScript code on the Google Chrome console:
+打开Chrome 控制台后,研究下图中的按钮.我们将花大量时间在控制台上.这个窗口是你的JavaScript运行的地方.Chrome V8引擎将你的JavaScript代码转化为机器码.让我们在控制台中写下代码:
+
 
 ![write code on console](./images/js_code_on_chrome_console.png)
 
-#### Writing Code on Browser Console
+#### 在浏览器控制台中写代码
 
-We can write any JavaScript code on the Google console or any browser console. However, for this challenge, we only focus on Google Chrome console. Open the console using:
+我们可以在Chrome控制台或者任何浏览器控制台中中写下JavaScript代码.然而，在这里我们只关注Chrome控制台.通过以下命令打开
 
 ```sh
 Mac
@@ -268,15 +268,16 @@ Ctl+Shift+I
 
 ##### Console.log
 
-To write our first JavaScript code, we used a built-in function **console.log()**. We passed an argument as input data, and the function displays the output. We passed 'Hello, World' as input data or argument in the console.log() function.
+写下我们的第一行JavaScript 代码,我们使用内置函数 **console.log()**.我们输入一个参数，然后这个函数输出这个参数.我们输入'Hello, World'：
 
 ```js
 console.log('Hello, World!')
 ```
 
-##### Console.log with Multiple Arguments
+##### 多参数的Console.log
 
-The **console.log()** function can take multiple parameters separated by comma. The syntax looks like as follows:**console.log(param1, param2, param3)**
+通过逗号给**console.log**函数输入多个参数.语法:**console.log(param1, param2, param3)**
+
 
 ![console log multiple arguments](./images/console_log_multipl_arguments.png)
 
@@ -285,20 +286,19 @@ console.log('Hello', 'World', '!')
 console.log('HAPPY', 'NEW', 'YEAR', 2020)
 console.log('Welcome', 'to', 30, 'Days', 'Of', 'JavaScript')
 ```
+从上面的代码片段你可以看到,_console.log()_支持多个参数.推荐在测试代码中多使用 console.log() 来检查你的代码做了些什么。但是也要及时删除多余console.log()。保持浏览器控制台打开能够让你编码更顺心.
 
-As you can see from the snippet code above, _console.log()_ can take multiple arguments. It is recommended to use as many console.log() prints to check what is happening in your code but don't keep all console.log() tests on your code forever. Make your life easy by keeping the browser console open.
+##### 注释
 
-##### Comments
+我们在代码中添加注释.注释能提高代码可读性并且给代码留下标记.JavaScript不执行注释部分的内容.在JavaScript中，// 之后的这一行内容被认定为注释. /\* \*/可以用来写多行注释
 
-We add comments to our code. Comments are very important to make code more readable and to leave remarks in our code. JavaScript does not execute the comment part of our code.In JavaScript, any text line starting with // in JavaScript is a comment, and anything enclosed like this /\* \*/ is also a comment.
-
-**Example: Single Line Comment**
+**举例: 一个单行注释**
 
 // This is the first comment  
  // This is the second comment  
  // I am a single line comment
 
-**Example: Multiline Comment**
+**举例: 多行注释**
 
 /\*
 This is a multiline comment  
@@ -306,21 +306,23 @@ This is a multiline comment
  JavaScript is the language of the web  
  \*/
 
-##### Syntax
+##### 语法
 
-Programming languages are similar to human languages. English or many other language uses words, phrases, sentences, compound sentences and other more to convey a meaningful message. The English meaning of syntax is _the arrangement of words and phrases to create well-formed sentences in a language_. The technical definition of syntax is _the structure of statements in a computer language._ Programing languages have syntax. JavaScript is a programming language and like other programming languages it has its own syntax. If we do not write a syntax that JavaScript understands, it will raise different types of errors. We will explore different kinds of JavaScript errors later. For now, let us see syntax errors.
+编程语言和人类语言类似.英语或者其它语言使用单词, 词组, 句子, 复合语句和其它更多 来传达有意义的信息. 语法的英文含义是 _用一种合适的形式排列单词和短语_.技术层面对语法的定义是: _the structure of statements in a computer language._ 编程语言由语法.JavaScript和其它编程语言一样由它自己的语法.如果我们不按照JavaScript规定方式写，就会给我们报错.之后我么会讨论不通种类的JavaScript报错.现在，我们先看看常见的语法错误.
+
 
 ![Error](images/raising_syntax_error.png)
 
-I made a deliberate mistake. As a result, the console raises syntax errors. Actually, the syntax is very informative. It informs what type of mistake was made. By reading the error feedback guideline, we can correct the syntax and fix the problem. The process of identifying and removing errors from a program is called debugging. Let us fix the errors:
+我故意犯了一个错误。 结果，控制台报出语法错误。 实际上，语法非常有用。 它告知您犯了什么类型的错误。 通过阅读错误反馈，我们可以更正语法并解决问题。从程序中识别和消除错误的过程称为调试。 让我们修复错误：
 
 ```js
 console.log("Hello, World!")
 console.log('Hello, World!')
 ```
 
-So far, we saw how to display text using the _console.log()_. If we are printing text or string using _console.log()_, the text has to be inside the single quotes, double quotes, or a backtick quotes.
-**Example:**
+到目前为止，我们已经看到了如何使用 _console.log()_ 显示文本。 如果我们使用 _console.log()_ 打印文本或字符串，则文本必须在单引号，双引号或反引号内。
+
+**举例:**
 
 ```js
 console.log('Hello, World!')
@@ -328,11 +330,11 @@ console.log('Hello, World!')
 console.log(`Hello, World!`)
 ```
 
-#### Arithmetics
+#### 算术运算
 
-Now, let us practice more writing JavaScript codes using _console.log()_ on google chrome console for number data types.
-In addition to the text, we can also do mathematical calculations using JavaScript. Let us do the following simple calculations.
-The console can directly take arguments without the **_console.log()_** function. However, it is included in this introduction because most of this challenge would be taking place in a text editor where the usage of the function would be mandatory. You can play around directly with instructions on the console.
+现在，让我们练习更多在Google chrome控制台上使用 _console.log()_ 编写算数运算的JavaScript代码。
+
+控制台可以直接接受参数，而无需使用 **_console.log()_** 函数。 但是，在本简介中它包含在 **_console.log()_** 中，因为大多数挑战将在文本编辑器中进行，在该文本编辑器中必须强制使用该功能.您可以直接按照控制台上的说明进行操作。
 
 ![Arithmetic](images/arithmetic.png)
 
@@ -345,21 +347,20 @@ console.log(3 % 2) // Modulus - finding remainder
 console.log(3 ** 2) // Exponentiation 3 ** 2 == 3 * 3
 ```
 
-### Code Editor
+### 代码编辑器
 
 We can write our codes on the browser console, but it won't do for bigger projects. In a real working environment, developers use different code editors to write their codes. In this 30 days JavaScript challenge, we will be using Visual Studio Code.
 
-#### Installing Visual Studio Code
-
-Visual studio code is a very popular open-source text editor. I would recommend to [download Visual Studio Code](https://code.visualstudio.com/), but if you are in favor of other editors, feel free to follow with what you have.
+#### 安装 Visual Studio Code
+Visual studio code 是非常流行的开源文本编辑器.我推荐你 [下载 Visual Studio Code](https://code.visualstudio.com/)，但是如果你可以使用你更喜欢的编辑器.
 
 ![Vscode](images/vscode.png)
 
-If you installed Visual Studio Code, let us start using it.
+如果你安装了Visual Studio Code,请按照以下步骤进行操作:
 
-#### How to Use Visual Studio Code
+#### 如何使用 Visual Studio Code
 
-Open the Visual Studio Code by double-clicking its icon. When you open it, you will get this kind of interface. Try to interact with the labeled icons.
+双击桌面图标打开Visual Studio Code。打开后你将看到如下界面.请尝试点击图片的标识的按钮了解功能.
 
 ![Vscode ui](./images/vscode_ui.png)
 
@@ -375,7 +376,12 @@ Open the Visual Studio Code by double-clicking its icon. When you open it, you w
 
 ![coding running](./images/launched_on_new_tab.png)
 
-Congratulations! You have completed the setup you need to get started with React, but before we dive into React let's do a JavaScript refresher. If you are very comfortable with JavaScript you may skip day 1 JavaScript refresher. The JavaScript refresher section is vast and it may take more than one day. From my experience people usually get stuck in React because their JavaScript knowledge is very shallow therefore to fill that gap all the necessary JavaScript features which can be used in React are covered in the JavaScript refresher section. There are many exercises but you are not required to solve them. Click [here](../30-Days-Of-React/02_Day_Introduction_to_React/02_introduction_to_react.md) if you want skip JavaScript and jump directly into React.
+恭喜你！ 您已经完成了开始使用React所需的设置，但是在深入研究React之前，让我们做一个JavaScript复习。
+如果您对JavaScript非常枢系，则可以跳过第一天的JavaScript复习。 
+JavaScript复习部分内容丰富，可能需要一天以上的时间。
+根据我的经验，人们通常会因为他们的JavaScript知识很浅导致学习React产生困难.为了弥补这一空白，React中可以使用的所有必需的JavaScript功能都在JavaScript部分中介绍。
+有许多练习，但是您不需要把它们全部解决掉。
+点击[这里](../30-Days-Of-React/02_Day_Introduction_to_React/02_introduction_to_react.md)跳过第一天JavaScript的复习.
 
 🎉 CONGRATULATIONS ! 🎉
 
