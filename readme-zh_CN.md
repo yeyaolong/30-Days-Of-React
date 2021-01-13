@@ -17,13 +17,14 @@
 <small> October, 2020</small></sub>
 
 </div>
+
 [英文 README](readme.md)
 
 [第一天 >>](./01_Day_JavaScript_Refresher/01_javascript_refresher.md)
 
 | # Day |                                                           Topics                                                            |
 | ----- | :-------------------------------------------------------------------------------------------------------------------------: |
-|00|[介绍](#介绍)<br> [如何使用储存库Repository](#如何使用储存库Repository)<br> [前提条件](#前提条件)<br> [Setup](#setup)|
+|00|[介绍](#介绍)<br> [如何使用储存库Repository](#如何使用储存库Repository)<br> [前提条件](#前提条件)<br> [开发环境](#开发环境)|
 |01|[JavaScript Refresher](./01_Day_JavaScript_Refresher/01_javascript_refresher.md)|
 |02|[Getting Started React](./02_Day_Introduction_to_React/02_introduction_to_react.md)|
 |03|[Setting Up](./03_Day_Setting_Up/03_setting_up.md)|
@@ -82,9 +83,9 @@ Support [*Asabeneh*](https://www.patreon.com/asabeneh?fan_landing=true) to creat
   - [Structure Exercise Solutions](#structure-exercise-solutions)
   - [Commit Exercise Solutions](#commit-exercise-solutions)
   - [Update your Fork Daily](#update-your-fork-daily)
-- [Setup](#setup)
-  - [Install Node.js](#install-nodejs)
-  - [Browser](#browser)
+- [开发环境](#开发环境)
+  - [安装Node.js](#安装Node.js)
+  - [浏览器](#浏览器)
     - [Installing Google Chrome](#installing-google-chrome)
     - [Opening Google Chrome Console](#opening-google-chrome-console)
     - [Writing Code on Browser Console](#writing-code-on-browser-console)
@@ -99,7 +100,7 @@ Support [*Asabeneh*](https://www.patreon.com/asabeneh?fan_landing=true) to creat
 
 ---
 
-## Introduction
+## 介绍
 
 **Congratulations** on deciding to participate in 30 days of React programming challenge. In this challenge you will learn everything you need to use to develop a React application. In the end of the challenge you will get a 30DaysOfReact programming challenge completion certificate. In case you need help or if you would like to help others you may join the [telegram group](https://t.me/thirtydaysofreact).
 
@@ -124,7 +125,7 @@ To get along with the challenge you need to have the following:
 5. A code editor
 6. HTML, CSS and JavaScript intermediate level skill
 
-## How to Use Repo
+## 如何使用储存库Repository
 
 ### Star and Fork this Repo
 
@@ -195,11 +196,11 @@ git merge upstream/master exercise-solutions
 git push origin exercise-solutions
 ```
 
-## Setup
+## 开发环境
 
 I believe you have the motivation and a strong desire to be a developer, a computer and Internet. In addition to that basic to intermediate level HTML, CSS and JS. If you have those, then you have everything to get started.
 
-### Install Node.js
+### 安装Node.js
 
 You may not need node.js right now but you may need it for later. Install [node.js](https://nodejs.org/en/).
 
@@ -218,7 +219,7 @@ v12.14.0
 
 When making this tutorial I was using node version 12.14.0, but now the recommended version of node.js for download is 12.17.0.
 
-### Browser
+### 浏览器
 
 There are many browsers out there. However, I strongly recommend Google Chrome.
 
