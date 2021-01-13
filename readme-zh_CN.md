@@ -103,7 +103,7 @@ Support [*Asabeneh*](https://www.patreon.com/asabeneh?fan_landing=true) to creat
 ## 介绍
 **恭喜**你决定加入30天React编程挑战.在这个挑战中你将学会开发一个React应用所需要的所有内容.在这个挑战的最后，你将获得30DaysOfReact 编程挑战认证.如果你需要帮助或者如果你想帮助其他人，你可以参与[telegram group](https://t.me/thirtydaysofreact).
 
-**A 30DaysOfReact** 挑战同时帮助初学者、JavaScript开发、React开发欢迎来到30天学会React. React是一个JavaScript库.我很享受使用和教授React,希望你也如此.在这个挑战中你将一步一步学到React是世界上最受欢迎的用户界面JavaScript库之一。
+**A 30DaysOfReact** 同时帮助初学者、JavaScript开发、React开发.欢迎来到30天学会React. React是一个JavaScript库.我很享受使用和教授React,希望你也如此.在这个挑战中你将一步一步学到React是世界上最受欢迎的用户界面JavaScript库之一。
 
 React 能够做所有JavaScript能做的事情.React可以**_给网页添加交互, 开发一个移动端app, 桌面应用, 游戏_**.我相信你能在这30天中学到很多编程技巧并显著提高问题解决技巧.
 
@@ -152,7 +152,6 @@ git checkout -b exercise-solutions # `-b` creates the branch if it does not exis
 
 ### 构建你的日常练习目录
 
-In your new branch, you can use files/folders to structure your solutions to daily exercises
 在新分支上，你可以使用文件/文件夹 构建你的日常练习目录.
 
 ```bash
@@ -233,7 +232,8 @@ v12.14.0
 
 #### 打开 Google Chrome 控制台
 
-你可通过点击浏览器右上角的三个小点，选择 _More tools -> Developer tools_打开控制台，或者使用键盘快捷键打开浏览器的控制台，我更推荐键盘快捷键
+你可通过点击浏览器右上角的三个小点，选择
+_More tools -> Developer tools_ 打开控制台，或者使用键盘快捷键打开浏览器的控制台，我更推荐键盘快捷键
 
 ![Opening chrome](images/opening_developer_tool.png)
 
@@ -308,7 +308,7 @@ This is a multiline comment
 
 ##### 语法
 
-编程语言和人类语言类似.英语或者其它语言使用单词, 词组, 句子, 复合语句和其它更多 来传达有意义的信息. 语法的英文含义是 _用一种合适的形式排列单词和短语_.技术层面对语法的定义是: _the structure of statements in a computer language._ 编程语言由语法.JavaScript和其它编程语言一样由它自己的语法.如果我们不按照JavaScript规定方式写，就会给我们报错.之后我么会讨论不通种类的JavaScript报错.现在，我们先看看常见的语法错误.
+编程语言和人类语言类似.英语或者其它语言使用单词, 词组, 句子, 复合语句和其它更多 来传达有意义的信息. 语法的英文含义是 _用一种合适的形式排列单词和短语_.技术层面对语法的定义是: _the structure of statements in a computer language._ 编程语言有语法.JavaScript和其它编程语言一样由它自己的语法.如果我们不按照JavaScript规定方式写，就会给我们报错.之后我么会讨论不通种类的JavaScript报错.现在，我们先看看常见的语法错误.
 
 
 ![Error](images/raising_syntax_error.png)
@@ -344,12 +344,13 @@ console.log(3 - 2) // Subtraction
 console.log(2 * 3) // Multiplication
 console.log(3 / 2) // Division
 console.log(3 % 2) // Modulus - finding remainder
-console.log(3 ** 2) // Exponentiation 3 ** 2 == 3 * 3
+console.log(3 ** 2) // 2次平方运算 Exponentiation 3 ** 2 == 3 * 3
 ```
 
 ### 代码编辑器
 
-We can write our codes on the browser console, but it won't do for bigger projects. In a real working environment, developers use different code editors to write their codes. In this 30 days JavaScript challenge, we will be using Visual Studio Code.
+我们可以在浏览器控制台中写代码，但是这无法形成更大的项目.在真实工作环境中，开发者使用不懂得代码编辑器写代码.在这个项目中,我们使用Visual Studio Code
+
 
 #### 安装 Visual Studio Code
 Visual studio code 是非常流行的开源文本编辑器.我推荐你 [下载 Visual Studio Code](https://code.visualstudio.com/)，但是如果你可以使用你更喜欢的编辑器.
@@ -360,7 +361,7 @@ Visual studio code 是非常流行的开源文本编辑器.我推荐你 [下载 
 
 #### 如何使用 Visual Studio Code
 
-双击桌面图标打开Visual Studio Code。打开后你将看到如下界面.请尝试点击图片的标识的按钮了解功能.
+双击桌面图标打开Visual Studio Code。打开后你将看到如下界面.请尝试点击图片中标识的按钮了解功能.
 
 ![Vscode ui](./images/vscode_ui.png)
 
