@@ -25,7 +25,7 @@
 | # Day |                                                           Topics                                                            |
 | ----- | :-------------------------------------------------------------------------------------------------------------------------: |
 |00|[介绍](#介绍)<br> [如何使用储存库Repository](#如何使用储存库Repository)<br> [开展学习的前提条件](#前提条件)<br> [准备工作](#准备工作)|
-|01|[Javascript 复习](./01_Day_JavaScript_Refresher/01_javascript_refresher.md)|
+|01|[Javascript 复习](./01_Day_JavaScript_Refresher/01_javascript_refresher-zh_CN.md)|
 |02|[开始学习React](./02_Day_Introduction_to_React/02_introduction_to_react.md)|
 |03|[搭建第一个项目](./03_Day_Setting_Up/03_setting_up.md)|
 |04|[Components](./04_Day_Components/04_components.md)|
