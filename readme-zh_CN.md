@@ -20,7 +20,7 @@
 
 [英文 README](readme.md)
 
-[第一天 >>](./01_Day_JavaScript_Refresher/01_javascript_refresher.md)
+[第一天 >>](./01_Day_JavaScript_Refresher/01_javascript_refresher-zh_CN.md)
 
 | # Day |                                                           Topics                                                            |
 | ----- | :-------------------------------------------------------------------------------------------------------------------------: |
