@@ -50,7 +50,7 @@
       - [使用pop方法移除元素](#使用pop方法移除元素)
       - [使用shift方法移除数组首元素](#使用shift方法移除数组首元素)
       - [使用unshift方法添加数组首元素](#使用unshift方法添加数组首元素)
-      - [数组反向reserve](#数组反向reserve)
+      - [数组反向reverse](#数组反向reverse)
       - [数组排序](#数组排序)
     - [多维数组](#多维数组)
   - [💻 Exercise](#-exercise)
@@ -870,7 +870,7 @@ numbers.unshift(0) // -> add one item from the beginning
 console.log(numbers) // -> [0,1,2,3,4,5]
 ```
 
-##### 数组反向reserve
+##### 数组反向reverse
 
 reverse: reverse the order of an array.
 
