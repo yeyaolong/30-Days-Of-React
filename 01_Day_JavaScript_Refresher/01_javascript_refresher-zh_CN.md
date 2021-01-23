@@ -39,19 +39,19 @@
       - [使用fill创建静态数据](#使用fill创建静态数据)
       - [使用concat连接数组](#使用concat连接数组)
       - [获取数组长度](#获取数组长度)
-      - [获取指定index的数组元素](#获取指定index的数组元素)
-      - [从数组末尾获取某个元素](#从数组末尾获取某个元素)
+      - [检查数组中是否有某个元素](#检查数组中是否有某个元素)
+      - [从数组末尾开始查询某个元素的位置](#从数组末尾开始查询某个元素的位置)
       - [检验对象是否为数组](#检验对象是否为数组)
       - [数组转字符串toString](#数组转字符串)
-      - [加入数组元素join](#加入数组元素join)
-      - [数组切片slice](#数组切片)
+      - [将数组各个元素连接起来join](#将数组各个元素连接起来join)
+      - [数组切片sliceslice](#数组切片slice)
       - [数组拼接splice](#数组拼接splice)
-      - [使用push方法给数组添加元素](#使用push方法给数组添加元素)
-      - [使用pop方法移除元素](#使用pop方法移除元素)
-      - [使用shift方法移除数组首元素](#使用shift方法移除数组首元素)
-      - [使用unshift方法添加数组首元素](#使用unshift方法添加数组首元素)
-      - [数组反向reverse](#数组反向reverse)
-      - [数组排序](#数组排序)
+      - [push: 在数组末尾添加元素](#push:-在数组末尾添加元素)
+      - [pop: 移除数组末尾元素](#pop:-移除数组末尾元素)
+      - [shift: 移除数组首元素](#shift:-移除数组首元素)
+      - [unshift: 在数组首位添加元素](#unshift:-在数组首位添加元素)
+      - [reverse: 数组反向](#reverse:-数组反向)
+      - [sort: 数组排序](#sort:-数组排序)
     - [多维数组](#多维数组)
   - [💻 Exercise](#-exercise)
       - [Exercise: Level 1](#exercise-level-1)
@@ -408,7 +408,7 @@ console.log(arr)
 
 #### 使用split函数创建数组
 
-As we have seen in the earlier section, we can split a string at different positions, and we can change to an array. Let us see the examples below.
+我们能够在不同位置分割字符串,将字符串转化成数组，就像下面这个例子:
 
 ```js
 let js = 'JavaScript'
@@ -431,7 +431,7 @@ console.log(words)
 
 #### 使用index下标获取数组元素
 
-We access each element in an array using their index. An array index starts from 0. The picture below clearly shows the index of each element in the array.
+我们能够通过下标获取数组中的元素.数组的下标从0开始.下面的图片能够表述清楚下标和数组中每个元素的关系.
 
 ![arr index](../images/array_index.png)
 
@@ -603,7 +603,7 @@ console.log(four4values) // [4, 4, 4, 4]
 
 ##### 使用concat连接数组
 
-concat:To concatenate two arrays.
+concat: 连接两个数组
 
 ```js
 const firstList = [1, 2, 3]
@@ -627,16 +627,17 @@ console.log(fruitsAndVegetables)
 
 ##### 获取数组长度
 
-Length:To know the size of the array
+Length: 获取数组的长度
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
 console.log(numbers.length) // -> 5 is the size of the array
 ```
 
-##### 获取指定index的数组元素
+##### 检查数组中是否有某个元素
 
-indexOf:To check if an item exist in an array. If it exists it returns the index else it returns -1.
+indexOf: 检查数组中是否有某个元素.如果存在，返回对应的下标，不存在则返回-1.
+
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -647,9 +648,7 @@ console.log(numbers.indexOf(1)) // -> 0
 console.log(numbers.indexOf(6)) // -> -1
 ```
 
-Check an element if it exist in an array.
-
-- Check items in a list
+- 校验数组中是否存在某个元素
 
 ```js
 // let us check if a banana exist in the array
@@ -679,9 +678,11 @@ if (indexOfAvocado != -1) {
 // This fruit does not exist in the array
 ```
 
-##### 从数组末尾获取某个元素
+##### 从数组末尾开始查询某个元素的位置
 
-lastIndexOf: It gives the position of the last item in the array. If it exist, it returns the index else it returns -1.
+lastIndexOf: 从数组末尾开始查询某个元素的位置.
+如果存在，返回此元素的下标，否则返回-1
+
 
 ```js
 const numbers = [1, 2, 3, 4, 5, 3, 1, 2]
@@ -693,7 +694,7 @@ console.log(numbers.lastIndexOf(4)) //  3
 console.log(numbers.lastIndexOf(6)) // -1
 ```
 
-includes:To check if an item exist in an array. If it exist it returns the true else it returns false.
+includes: 校验某个元素是否在数组中.如果存在，返回true, 否则返回 false
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -719,7 +720,7 @@ console.log(webTechs.includes('C')) // false
 
 ##### 检验对象是否为数组
 
-Array.isArray:To check if the data type is an array
+Array.isArray: 检验数据类型是否为数组.
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -731,7 +732,7 @@ console.log(Array.isArray(number)) // false
 
 ##### 数组转字符串
 
-toString:Converts array to string
+toString: 数组转字符串
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -741,9 +742,9 @@ const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
 console.log(names.toString()) // Asabeneh,Mathias,Elias,Brook
 ```
 
-##### 加入数组元素join
+##### 将数组各个元素连接起来join
 
-join: It is used to join the elements of the array, the argument we passed in the join method will be joined in the array and return as a string. By default, it joins with a comma, but we can pass different string parameter which can be joined between the items.
+join: 用于将数组的各个元素连接起来, 我们可以在join方法中输入参数，作为数组转化成字符串后各个元素之间的连接符.默认使用','作为连接符，我们也可以输入自定义参数来连接各元素.
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -771,9 +772,11 @@ console.log(webTechs.join()) // "HTML,CSS,JavaScript,React,Redux,Node,MongoDB"
 console.log(webTechs.join(' # ')) // "HTML # CSS # JavaScript # React # Redux # Node # MongoDB"
 ```
 
-##### 数组切片
+##### 数组切片slice
 
-Slice: To cut out a multiple items in range. It takes two parameters:starting and ending position. It doesn't include the ending position.
+slice: 在指定范围内对数组做切片操作.该方法接受两个参数 
+- starting: 切片起始位置
+- ending: 切片终点位置(切片时不包含终点)
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -786,7 +789,10 @@ console.log(numbers.slice(1, 4)) // -> [2,3,4] // it doesn't include the ending 
 
 ##### 数组拼接splice
 
-Splice: It takes three parameters:Starting position, number of times to be removed and number of items to be added.
+splice: 三个参数
+- 起点
+- 数组中要移除的元素的数量
+- 数组中新添加的(多个)元素
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -804,9 +810,9 @@ const numbers = [1, 2, 3, 4, 5, 6]
 console.log(numbers.splice(3, 3, 7, 8, 9)) // -> [1, 2, 3, 7, 8, 9] //it removes three item and replace three items
 ```
 
-##### 使用push方法给数组添加元素
+##### push: 在数组末尾添加元素
 
-Push: adding item in the end. To add item to the end of an existing array we use the push method.
+push: 在数组末尾添加元素.
 
 ```js
 // syntax
@@ -837,9 +843,9 @@ fruits.push('lime')
 console.log(fruits) // ['banana', 'orange', 'mango', 'lemon', 'apple', 'lime']
 ```
 
-##### 使用pop方法移除元素
+##### pop: 移除数组末尾元素
 
-pop: Removing item in the end.
+pop: 移除数组末尾的元素
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -848,9 +854,10 @@ numbers.pop() // -> remove one item from the end
 console.log(numbers) // -> [1,2,3,4]
 ```
 
-##### 使用shift方法移除数组首元素
+##### shift: 移除数组首元素
 
-shift: Removing one array element in the beginning of the array.
+shift: 移除数组首元素
+
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -859,9 +866,10 @@ numbers.shift() // -> remove one item from the beginning
 console.log(numbers) // -> [2,3,4,5]
 ```
 
-##### 使用unshift方法添加数组首元素
+##### unshift: 在数组首位添加元素
 
-unshift: Adding array element in the beginning of the array.
+unshift: 在数组首位添加元素
+
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -870,9 +878,9 @@ numbers.unshift(0) // -> add one item from the beginning
 console.log(numbers) // -> [0,1,2,3,4,5]
 ```
 
-##### 数组反向reverse
+##### reverse: 数组反向
 
-reverse: reverse the order of an array.
+reverse: 数组反向
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -884,9 +892,9 @@ numbers.reverse()
 console.log(numbers) // [1, 2, 3, 4, 5]
 ```
 
-##### 数组排序
+##### sort: 数组排序
 
-sort: arrange array elements in ascending order. Sort takes a call back function, we will see how we use sort with a call back function in the coming sections.
+sort: 数组正序排序.Sort方法可以添加回调函数，一下代码片段张时如何使用回调函数给数组排序.
 
 ```js
 const webTechs = [
@@ -908,7 +916,7 @@ console.log(webTechs) // ["Redux", "React", "Node", "MongoDB", "JavaScript", "HT
 
 #### 多维数组
 
-Array can store different data types including an array itself. Let us create an 多维数组
+数组可以存储包括数组类型在内的不同类型的数据.
 
 ```js
 const firstNums = [1, 2, 3]
