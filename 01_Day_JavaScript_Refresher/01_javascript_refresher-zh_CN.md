@@ -41,7 +41,7 @@
       - [获取数组长度](#获取数组长度)
       - [检查数组中是否有某个元素](#检查数组中是否有某个元素)
       - [从数组末尾开始查询某个元素的位置](#从数组末尾开始查询某个元素的位置)
-      - [检验对象是否为数组](#检验对象是否为数组)
+      - [校验对象是否为数组](#校验对象是否为数组)
       - [数组转字符串toString](#数组转字符串)
       - [将数组各个元素连接起来join](#将数组各个元素连接起来join)
       - [数组切片sliceslice](#数组切片slice)
@@ -718,9 +718,9 @@ console.log(webTechs.includes('Node')) // true
 console.log(webTechs.includes('C')) // false
 ```
 
-##### 检验对象是否为数组
+##### 校验对象是否为数组
 
-Array.isArray: 检验数据类型是否为数组.
+Array.isArray: 校验数据类型是否为数组.
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -967,30 +967,329 @@ const webTechs = [
 ]
 ```
 
-1. Declare an _empty_ array;
-2. Declare an array with more than 5 number of elements
-3. Find the length of your array
-4. Get the first item, the middle item and the last item of the array
-5. Declare an array called _mixedDataTypes_, put different data types in the array and find the length of the array. The array size should be greater than 5
-6. Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
-7. Print the array using _console.log()_
-8. Print the number of companies in the array
-9. Print the first company, middle and last company
-10. Print out each company
-11. Change each company name to uppercase one by one and print them out
-12. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
-13. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is _not found_
-14. Filter out companies which have more than one 'o' without the filter method
-15. Sort the array using _sort()_ method
-16. Reverse the array using _reverse()_ method
-17. Slice out the first 3 companies from the array
-18. Slice out the last 3 companies from the array
-19. Slice out the middle IT company or companies from the array
-20. Remove the first IT company from the array
-21. Remove the middle IT company or companies from the array
-22. Remove the last IT company from the array
-23. Remove all IT companies
+1. 定义一个 _空_ 数组;
 
+```javascript
+let emptyArray = new Array();
+console.log(emptyArray); // []
+```
+2. 定义一个超过5个元素的数组
+```javascript
+let array = new Array(5);
+console.log(array); // [empay X 5]
+```
+3. 获取数组的长度
+```javascript
+console.log(countries.length); // 11
+```
+4. 获取数组的第一个元素, 中间元素和最后一个元素
+```javascript
+let len = coutries.length;
+let firstIndex = 0;
+let middleIndex = parseInt(len/2);
+let lastIndex = len-1;
+console.log(countries[firstIndex]);
+console.log(countries[middleIndex]);
+console.log(countries[lastIndex]);
+```
+5. 定义一个名为 _mixedDataTypes_ 的数组,在里面放入至少5个不通类型的元素，并获取数组长度.
+```javascript
+let mixedDataTypes = [
+  'string',
+  0,
+  true,
+  function test() {},
+  undefined,
+  null,
+  {
+    name: '张三',
+    age: 11
+  }
+];
+console.log(mixedDataTypes.length); // 7
+```
+6. 定义一个名为 _itCompanies_ 数组，并初始化值: Facebook, Google, Microsoft, Apple, IBM, Oracle 和 Amazon
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+]
+```
+7.使用 _console.log()_ 打印数组
+```javascript
+console.log(itCompanies); //  ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle"]
+```
+8. 打印公司数量
+```javascript
+console.log(itCompanies.length); // 6
+```
+
+9. 打印第一家公司，中间公司和最后一家公司
+```javascript
+let len = itCompanies.length;
+let firstIndex = 0;
+let middleIndex = parseInt(itCompanies.length / 2);
+let lastIndex = len - 1;
+
+console.log(itCompanies[firstIndex], itCompanies[middleIndex], itCompanies[lastIndex])
+
+```
+
+10. 将每个公司打印出来
+```javascript
+itCompanies.forEach((item) => {
+  console.log(item);
+})
+```
+11. 将每个公司的名称大写后打印出来
+```javascript
+itCompanies.forEach((item) => {
+  console.log(item.toUpperCase());
+});
+```
+12. 使用数组中的内容打印成如下句子:Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+```javascript
+let sentence = '';
+let len = itCompanies.length;
+itCompanies.forEach((item, index) => {
+  if (index < len - 1) {
+    sentence += item + ','
+  } else {
+    sentence += `and ${item} are big IT companies`;
+  }
+})
+```
+13. 判断 itCompanies 数组中是否存在 _中间公司_.如果存在则返回这个公司，如果不存在则返回 _not found_
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+]
+
+const len = itCompanies.length;
+
+if (len%2 === 0) {
+  // 不存在中位数
+  console.log('not found');
+} else {
+  // 存在中位数
+  let middleIndex = parseInt(len / 2);
+  console.log(`middle company is: ${itCompanies[middleIndex]}`);
+}
+
+```
+14. 不适用filter方法找到数组中包含两个及以上 'o' 字母的公司
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+];
+
+let result = [];
+
+itCompanies.forEach((item) => {
+  let oCount = 0;
+  item.split('').forEach((item2) => {
+    if (item2 === 'o') {
+      oCount++;
+    }
+  })
+  if (oCount > 1) {
+    result.push(item);
+  }
+});
+
+console.log(result); // ["Facebook", "Google", "Microsoft"]
+```
+
+
+
+15. 使用 _sort()_ 方法给数组排序
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+];
+
+itCompanies.sort();
+
+console.log(itCompanies); // ["Apple", "Facebook", "Google", "IBM", "Microsoft", "Oracle"]
+
+```
+
+16. 使用 _reverse()_ 方法翻转数组
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+];
+
+itCompanies.reverse();
+console.log(itCompanies); // ["Oracle", "IBM", "Apple", "Microsoft", "Google", "Facebook"]
+```
+17. 切出数组中的前3个公司
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+];
+
+let result = itCompanies.slice(0, 3);
+
+console.log(result); // ["Facebook", "Google", "Microsoft"]
+```
+
+
+18. 切出数组的最后3个公司
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+];
+
+let len = itCompanies.length;
+
+const startIndex = len - 3;
+const endIndex = len;
+let result = itCompanies.slice(startIndex, endIndex);
+
+console.log(result);
+
+```
+19. 切出数组中心的公司
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+];
+
+let len = itCompanies.length;
+let result = [];
+if (len % 2 === 0) {
+  // 偶数长度，中心有两个公司
+  const middle1 = (len - 1) / 2;
+  const middle2 = middle1 + 2;
+  result = itCompanies.slice(middle1, middle2); //
+} else {
+  // 奇数长度，中心只有一个公司
+  const middle = parseInt((len - 1)/2)
+  result = itCompanies.slice(middle, middle+1);
+}
+
+console.log(result); // ["Microsoft", "Apple"]
+
+
+```
+20. 移除数组第一个元素
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+];
+
+itCompanies.shift();
+
+console.log(itCompanies);
+```
+
+21. 移除数组中心的一个或两个公司
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+];
+
+let len = itCompanies.length;
+let result = [];
+if (len % 2 === 0) {
+  // 偶数长度，中心有两个公司
+  const middle1 = (len - 1) / 2;
+  result = itCompanies.splice(middle1, 2); //
+} else {
+  // 奇数长度，中心只有一个公司
+  const middle = parseInt((len - 1)/2)
+  result = itCompanies.slice(middle, 1);
+}
+
+console.log('itCompanies', itCompanies);
+```
+22. 移除数组最后一个元素
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+];
+
+itCompanies.pop();
+
+console.log(itCompanies);
+```
+
+23. 移除所有元素
+```javascript
+const itCompanies = [
+  'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle'
+];
+
+// itCompanies = []; // 就算不调用splice()方法，也算达成目的了吧
+// itCompanies.length = 0;
+
+const len = itCompanies.length;
+
+itCompanies.splice(0, len);
+
+console.log(itCompanies);
+
+```
 ##### Exercise: Level 2
 
 1. Create a separate countries.js file and store the countries array into this file, create a separate file web_techs.js and store the webTechs array into this file. Access both file in main.js file
